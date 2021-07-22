@@ -1,6 +1,8 @@
 body {
     font-size: 16px;
     line-height: 1.3em;
+    max-width: 760px;
+    margin: 0 auto;
 }
 
 p {
@@ -18,10 +20,7 @@ h4 {
 span {
     font-weight: 700;
 }
-body {
-    max-width: 1024px;
-    margin: 0 auto;
-}
+
 .avatar {
     width: 300px;
     margin-right: 30px;
@@ -53,4 +52,8 @@ body {
     display: inline-flex;
     flex-wrap: wrap;
     gap: 30px;
+}
+
+.footer-year {
+    text-align: center;
 }
