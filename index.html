@@ -1,61 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My CV</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My CV</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="content">
-        <img class="avatar" src="image/avatar.jpg" alt="avatar">
-        <h3>Yauheni Tsydrankou</h3>
-        <h4>Contact Info:</h4>
-        <ul>
-            <li><span>Telephone number:</span> +375333718187</li>
-            <li><span>Telegram:</span> evgeniy tsydrenkov</li>
-            <li><span>E-mail:</span> bexonn80@gmail.com</li>
-            <li><span>Github:</span> https://github.com/bexon26</li>
-            <li><span>English:</span> Pre-intermediate (А2).</li>
-        </ul>
-        <p>I am a beginner web-developer. My goal is to change jobs and do what I love, helping other people solve their problems.</p>
-        <p><span>Skills:</span> JavaScript, HTML, CSS, ModX, Bootstrap, Git</p>
-        <p><span>Tools:</span> Chrome, VS Code, Photoshop, Adobe Illustrator</p>
-        <h4>Code Exaples: javascript</h4>
-        <p>var photos = cardElement.querySelector('.popup__photos');
+  <header class="header">
+    <h1>Yauheni Tsydrankou</h1>
+  </header>
+  <main class="content">
+    <figure>
+      <img class="avatar" src="image/avatar.jpg" alt="avatar">
+    </figure>
 
-            if (card.offer.photos.length) {
-              for (var i = 0; i < card.offer.photos.length; i++) {
-                if (!i) {
-                  photos.children[0].src = card.offer.photos[0];
-                } else {
-                  var photo = photos.children[0].cloneNode(true);
-                  photo.src = card.offer.photos[i];
-                  photos.appendChild(photo);
-                }
-              }
-            } else {
-              photos.classList.add('visually-hidden');
-            }
-          
-            var avatar = cardElement.querySelector('.popup__avatar');
-            if (card.author.avatar) {
-              avatar.textContent = card.author.avatar;
-            } else {
-              avatar.classList.add('visually-hidden');
-            }
-          
-            return cardElement;
-          };</p>
-          <h4>Experience</h4>
-          <p>I have experience creating an online store on CMS ModX Revolution</p>
-          <h4>Education</h4>
-          <p>Faculty of Physics, specialty - Automated Systems of Information Processing, Univerversity of Name of Francisca Scorina 2014-2019.
+    <aside class="contacts">
 
-            HTML basics course
-            CSS course 
-            HTML Academy: JavaScript level 1, Mimo: basis html, css, js
-        </p>
-    </div>
+      <h4>Contact Info:</h4>
+      <ul>
+        <li><span>Telephone number:</span> +375333718187</li>
+        <li><span>Telegram:</span> evgeniy tsydrenkov</li>
+        <li><span>E-mail:</span> bexonn80@gmail.com</li>
+        <li><span>Github:</span> https://github.com/bexon26</li>
+        <li><span>English:</span> Pre-intermediate (А2).</li>
+      </ul>
+      <div class="layout-2-column">
+        <div class="left-column">
+          <h4>Skills:</h4>
+          <ul>
+            <li>JavaScript</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>ModX</li>
+            <li>Bootstrap</li>
+            <li>Git</li>
+          </ul>
+        </div>
+        <div class="right-column">
+          <h4>Tools:</h4>
+          <ul>
+            <li>Chrome</li>
+            <li>VS Code</li>
+            <li>Photoshop</li>
+            <li>Adobe Illustrator</li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+  </main>
+  <section class="description">
+    <p>I am a beginner web-developer. My goal is to change jobs and do what I love, helping other people solve their
+      problems.</p>
+
+
+
+    <h4>Code Exaples: javascript</h4>
+
+  </section>
+
+  <p>var photos = cardElement.querySelector('.popup__photos');
+
+    if (card.offer.photos.length) {
+    for (var i = 0; i < card.offer.photos.length; i++) { if (!i) { photos.children[0].src=card.offer.photos[0]; } else {
+      var photo=photos.children[0].cloneNode(true); photo.src=card.offer.photos[i]; photos.appendChild(photo); } } }
+      else { photos.classList.add('visually-hidden'); } var avatar=cardElement.querySelector('.popup__avatar'); if
+      (card.author.avatar) { avatar.textContent=card.author.avatar; } else { avatar.classList.add('visually-hidden'); }
+      return cardElement; };</p>
+      <h4>Experience</h4>
+      <p>I have experience creating an online store on CMS ModX Revolution</p>
+      <h4>Education</h4>
+      <p>Faculty of Physics, specialty - Automated Systems of Information Processing, Univerversity of Name of
+        Francisca Scorina 2014-2019.
+
+        HTML basics course
+        CSS course
+        HTML Academy: JavaScript level 1, Mimo: basis html, css, js
+      </p>
+      <footer class="footer">
+        <nav class="footer-links">
+          <figure>
+            <img class="github-logo" src="./image/github_PNG65.png" alt="github-logo">
+            <figcaption> <a href="https://github.com/bexon26">https://github.com/bexon26</a></figcaption>
+          </figure>
+          <figure>
+            <img class="rs-logo" src="./image/rs_school_js.svg" alt="rs-school-logo">
+            <figcaption> <a href="https://rs.school/js/">https://rs.school/js/</a></figcaption>
+          </figure>
+        </nav>
+
+
+      </footer>
 </body>
+
 </html>

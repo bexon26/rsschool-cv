@@ -3,7 +3,6 @@ body {
     line-height: 1.3em;
 }
 
-
 p {
     white-space: pre;
 }
@@ -19,11 +18,39 @@ h4 {
 span {
     font-weight: 700;
 }
-.content {
+body {
     max-width: 1024px;
     margin: 0 auto;
 }
 .avatar {
     width: 300px;
-    
+    margin-right: 30px;
+}
+
+.content {
+    display: flex;
+}
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.rs-logo {
+    width: 200px;
+}
+.github-logo {
+    width: 200px;
+}
+
+.footer-links {
+    margin-left: 60px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.layout-2-column {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 30px;
 }
