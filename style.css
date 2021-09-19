@@ -57,3 +57,14 @@ span {
 .footer-year {
     text-align: center;
 }
+
+.projects {
+    display: flex;
+    justify-content: space-between;
+}
+.project-item__image {
+    height: 100px;
+    width: 100px;
+    object-fit: fill;
+    border-radius: 10px;
+}
