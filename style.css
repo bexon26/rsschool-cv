@@ -4,10 +4,10 @@ body {
     max-width: 760px;
     margin: 0 auto;
 }
-
+/* 
 p {
     white-space: pre;
-}
+} */
 
 li {
     list-style-type: none;
@@ -61,10 +61,27 @@ span {
 .projects {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
+
+.projects-item {
+    width: 200px;
+}
+
+.projects-item > p {
+    width: 200px;
+}
+
 .project-item__image {
-    height: 100px;
-    width: 100px;
+    height: 200px;
+    width: 200px;
     object-fit: fill;
     border-radius: 10px;
+}
+
+figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

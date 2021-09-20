@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My CV</title>
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -54,38 +57,118 @@
   <section class="description">
     <p>I am web-developer. My goal is to change jobs and do what I love, helping other people solve their
       problems.</p>
+  </section>
 
-
-
+  <section class="projects">
     <h4>My projects:</h4>
+    <ul class="projects">
+      <li class="projects-item">
+        <a href="https://esoshyki.github.io/contra/" target="_blank">
+          <figure>
+            <img class="project-item__image" src="image/contra.jpg" alt="">
+            <figcaption>Game "Contra"</figcaption>
+          </figure>
+        </a>
+        <p>This is 2d shoter. Game have 2 levels and Boss in the end 2 level.</p>
+        <P>Tools: React, Redux, MatterJs, html, scss</P>
+      </li>
+
+      <li class="projects-item">
+        <a href="https://covid-git-master.esoshyki.vercel.app/" target="_blank">
+          <figure>
+            <img class="project-item__image" src="image/covid.jpg" alt="">
+            <figcaption>App "Covid"</figcaption>
+          </figure>
+        </a>
+        <p>This is statisctic application. App have world map, tables and graphics.</p>
+        <P>Tools: React, Redux, html, scss</P>
+      </li>
+
+
+      <li class="projects-item">
+        <a href="https://rolling-scopes-school.github.io/bexon26-JS2020Q3/english-for-kids/" target="_blank">
+          <figure>
+            <img class="project-item__image" src="image/english.jpg" alt="">
+            <figcaption>App "English"</figcaption>
+          </figure>
+        </a>
+        <p>This is English for Kids application. App have kit cards, learn and game mode.</p>
+        <P>Tools:Js, html, scss</P>
+      </li>
+
+
+
+
+      <li class="projects-item">
+        <a href="https://rolling-scopes-school.github.io/bexon26-JS2020Q3/gem-pazzle/" target="_blank">
+          <figure>
+            <img class="project-item__image" src="image/game.jpg" alt="">
+            <figcaption>Game "Gem Puzzle"</figcaption>
+          </figure>
+        </a>
+        <p>This is Game. Need to move blocks to connect right capture</p>
+        <P>Tools: Js, html, scss</P>
+      </li>
+
+
+      <li class="projects-item">
+        <a href="https://rolling-scopes-school.github.io/bexon26-JS2020Q3/virtual-keyboard/" target="_blank">
+          <figure>
+            <img class="project-item__image" src="image/keyboard.jpg" alt="">
+            <figcaption>App "keyboard"</figcaption>
+          </figure>
+        </a>
+        <p>This is Web keyboard. It have voice decoder to text</p>
+        <P> Tools:Js, html, css</P>
+      </li>
+
+
+
+      <li class="projects-item">
+        <a href="https://rolling-scopes-school.github.io/bexon26-JS2020Q3/momentum/" target="_blank">
+          <figure>
+            <img class="project-item__image" src="image/momentim.jpg" alt="">
+            <figcaption>App "Momentum"</figcaption>
+          </figure>
+        </a>
+        <p>This is Clock with Weather. Ever hour to change background picture</p>
+        <P>Tools: Js, html, css</P>
+      </li>
+
+
+
+
+    </ul>
 
   </section>
 
+  <section class="code">
+    <h4>Code Example: Hanoi Tower</h4>
+    <pre>
+      <code class="js">
+        export default function calculateHanoi(disksNumber, turnsSpeed) {
+          let turns = Math.pow(2, disksNumber) - 1;
+          let seconds = +(Math.floor(turns / (turnsSpeed / 3600)));
+      
+        return { turns: turns, seconds: seconds }
+        }
+      </code>
+    </pre>
 
-  <ul class="projects">
-    <li class="projects-item"><a href="https://esoshyki.github.io/contra/"><img class="project-item__image"
-          src="image/contra.jpg" alt=""></a></li>
-    <li class="projects-item"><a href="https://covid-git-master.esoshyki.vercel.app/"><img class="project-item__image"
-          src="image/covid.jpg" alt=""></a></li>
-    <li class="projects-item"><a href="https://rolling-scopes-school.github.io/bexon26-JS2020Q3/english-for-kids/"><img
-          class="project-item__image" src="image/english.jpg" alt=""></a></li>
-    <li class="projects-item"><a href="https://rolling-scopes-school.github.io/bexon26-JS2020Q3/gem-pazzle/"><img
-          class="project-item__image" src="image/game.jpg" alt=""></a></li>
-    <li class="projects-item"><a href="https://rolling-scopes-school.github.io/bexon26-JS2020Q3/virtual-keyboard/"><img
-          class="project-item__image" src="image/keyboard.jpg" alt=""></a></li>
-    <li class="projects-item"><a href="https://rolling-scopes-school.github.io/bexon26-JS2020Q3/momentum/"><img
-          class="project-item__image" src="image/momentim.jpg" alt=""></a></li>
-  </ul>
-  <h4>Experience</h4>
-  <p>I have experience creating an online store on CMS ModX Revolution</p>
-  <h4>Education</h4>
-  <p>Faculty of Physics, specialty - Automated Systems of Information Processing, Univerversity of Name of
-    Francisca Scorina 2014-2019.
+  </section>
+  <section class="expirience">
+    <h4>Experience</h4>
+    <p>I have experience creating an online store on CMS ModX Revolution</p>
+    <h4>Education</h4>
+    <p>Faculty of Physics, specialty - Automated Systems of Information Processing, Univerversity of Name of
+      Francisca Scorina 2014-2019.
 
-    HTML basics course
-    CSS course
-    HTML Academy: JavaScript level 1, Mimo: basis html, css, js
-  </p>
+      HTML basics course
+      CSS course
+      HTML Academy: JavaScript level 1, Mimo: basis html, css, js
+    </p>
+
+  </section>
   <footer class="footer">
 
     <nav class="footer-links">
