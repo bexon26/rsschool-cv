@@ -14,13 +14,30 @@
 <body>
   <header class="header">
     <h1>Yauheni Tsydrankou</h1>
+    <input id="burger" class="burger" type="checkbox" />
+
+    <label id="burger-label" for="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <div class="backdrop"></div>
+    <nav class="header-menu">
+      <ul class="header-menu-list">
+        <li><a href="#top" class="header-menu-list__item">Contact Info</a></li>
+        <li><a href="#project" class="header-menu-list__item">My projects</a> </li>
+        <li><a href="#code" class="header-menu-list__item">Code Example</a></li>
+        <li><a href="#expirience" class="header-menu-list__item">Experience</a> </li>
+        <li><a href="#education" class="header-menu-list__item">Education</a> </li>
+      </ul>
+    </nav>
   </header>
   <main class="content">
     <figure>
       <img class="avatar" src="image/avatar.jpg" alt="avatar">
     </figure>
 
-    <aside class="contacts">
+    <aside id="contact" class="contacts">
 
       <h4>Contact Info:</h4>
       <ul>
@@ -30,36 +47,65 @@
         <li><span>Github:</span> https://github.com/bexon26</li>
         <li><span>English:</span> Pre-intermediate (А2).</li>
       </ul>
-      <div class="layout-2-column">
-        <div class="left-column">
-          <h4>Skills:</h4>
-          <ul>
-            <li>JavaScript</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>ModX</li>
-            <li>Bootstrap</li>
-            <li>Git</li>
-          </ul>
+
+      <div class="container__progressbars">
+
+        <div class="progressbar">
+          <svg class="progressbar__svg">
+            <circle cx="45" cy="45" r="40" class="progressbar__svg-circle circle-html shadow-html"> </circle>
+          </svg>
+          <span class="progressbar__text shadow-html">HTML</span>
         </div>
-        <div class="right-column">
-          <h4>Tools:</h4>
-          <ul>
-            <li>Chrome</li>
-            <li>VS Code</li>
-            <li>Photoshop</li>
-            <li>Adobe Illustrator</li>
-          </ul>
+
+        <div class="progressbar">
+          <svg class="progressbar__svg">
+            <circle cx="45" cy="45" r="40" class="progressbar__svg-circle circle-css shadow-css"> </circle>
+          </svg>
+          <span class="progressbar__text shadow-css">CSS</span>
         </div>
+
+        <div class="progressbar">
+          <svg class="progressbar__svg">
+            <circle cx="45" cy="45" r="40" class="progressbar__svg-circle circle-scss shadow-scss"> </circle>
+          </svg>
+          <span class="progressbar__text shadow-scss">SCSS</span>
+        </div>
+
+        <div class="progressbar">
+          <svg class="progressbar__svg">
+            <circle cx="45" cy="45" r="40" class="progressbar__svg-circle circle-js shadow-js"> </circle>
+          </svg>
+          <span class="progressbar__text shadow-js">JavaScript</span>
+        </div>
+
+        <div class="progressbar">
+          <svg class="progressbar__svg">
+            <circle cx="45" cy="45" r="40" class="progressbar__svg-circle circle-ts shadow-ts"> </circle>
+          </svg>
+          <span class="progressbar__text shadow-ts">Git</span>
+        </div>
+
+        <div class="progressbar">
+          <svg class="progressbar__svg">
+            <circle cx="45" cy="45" r="40" class="progressbar__svg-circle circle-react shadow-react"> </circle>
+          </svg>
+          <span class="progressbar__text shadow-react">React.js</span>
+        </div>
+
+
+
+
+
       </div>
     </aside>
   </main>
   <section class="description">
+    <h4>About me:</h4>
     <p>I am web-developer. My goal is to change jobs and do what I love, helping other people solve their
       problems.</p>
   </section>
 
-  <section class="projects">
+  <section id="project" class="projects">
     <h4>My projects:</h4>
     <ul class="projects">
       <li class="projects-item">
@@ -142,7 +188,7 @@
 
   </section>
 
-  <section class="code">
+  <section id="code" class="code">
     <h4>Code Example: Hanoi Tower</h4>
     <pre>
       <code class="js">
@@ -156,10 +202,10 @@
     </pre>
 
   </section>
-  <section class="expirience">
+  <section id="expirience" class="expirience">
     <h4>Experience</h4>
     <p>I have experience creating an online store on CMS ModX Revolution</p>
-    <h4>Education</h4>
+    <h4 id="education">Education</h4>
     <p>Faculty of Physics, specialty - Automated Systems of Information Processing, Univerversity of Name of
       Francisca Scorina 2014-2019.
 
@@ -184,6 +230,38 @@
     <p class="footer-year">2021</p>
 
   </footer>
+  <script>const backdrop = document.querySelector('.backdrop');
+    const aboutLink = document.querySelectorAll('.header-menu-list__item');
+    const burger = document.getElementById('burger');
+    const burgerLabel = document.getElementById('burger-label');
+    const header = document.querySelector('.header');
+
+    backdrop.addEventListener('click', () => {
+      burger.checked = false;
+      burgerLabel.style.left = '20px'
+
+    })
+    aboutLink.forEach(item => {
+      item.addEventListener('click', () => {
+        burger.checked = false;
+        burgerLabel.style.left = '20px'
+      })
+    })
+
+    burger.addEventListener('change', () => {
+      if (!burger.checked) {
+        burgerLabel.style.left = '20px';
+      } else {
+        burgerLabel.style.left = `${(header.offsetWidth - window.innerWidth) / 2 + 270}px`;
+      }
+    })
+
+    window.addEventListener('resize', () => {
+      burgerLabel.style.left = '20px';
+      burger.checked = false;
+    })
+
+  </script>
 </body>
 
 </html>
