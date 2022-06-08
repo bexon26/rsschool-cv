@@ -5,19 +5,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My CV</title>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <header class="header">
     <h1>Yauheni Tsydrankou</h1>
+    <input id="burger" class="burger" type="checkbox" />
+
+    <label id="burger-label" for="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <div class="backdrop"></div>
+    <nav class="header-menu">
+      <ul class="header-menu-list">
+        <li><a href="#top" class="header-menu-list__item">Contact Info</a></li>
+        <li><a href="#project" class="header-menu-list__item">My projects</a> </li>
+        <li><a href="#code" class="header-menu-list__item">Code Example</a></li>
+        <li><a href="#expirience" class="header-menu-list__item">Experience</a> </li>
+        <li><a href="#education" class="header-menu-list__item">Education</a> </li>
+      </ul>
+    </nav>
   </header>
   <main class="content">
     <figure>
       <img class="avatar" src="image/avatar.jpg" alt="avatar">
     </figure>
 
-    <aside class="contacts">
+    <aside id="contact" class="contacts">
 
       <h4>Contact Info:</h4>
       <ul>
@@ -27,51 +47,174 @@
         <li><span>Github:</span> https://github.com/bexon26</li>
         <li><span>English:</span> Pre-intermediate (А2).</li>
       </ul>
-      <div class="layout-2-column">
-        <div class="left-column">
-          <h4>Skills:</h4>
-          <ul>
-            <li>JavaScript</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>ModX</li>
-            <li>Bootstrap</li>
-            <li>Git</li>
-          </ul>
-        </div>
-        <div class="right-column">
-          <h4>Tools:</h4>
-          <ul>
-            <li>Chrome</li>
-            <li>VS Code</li>
-            <li>Photoshop</li>
-            <li>Adobe Illustrator</li>
-          </ul>
-        </div>
-      </div>
+
+      <ul class="container__progressbars">
+
+        <li class="progressbar">
+          <svg class="progressbar__svg">
+            <circle cx="45" cy="45" r="40" class="progressbar__svg-circle circle-html shadow-html"> </circle>
+          </svg>
+          <span class="progressbar__text shadow-html">HTML</span>
+        </li>
+
+        <li class="progressbar">
+          <svg class="progressbar__svg">
+            <circle cx="45" cy="45" r="40" class="progressbar__svg-circle circle-css shadow-css"> </circle>
+          </svg>
+          <span class="progressbar__text shadow-css">CSS</span>
+        </li>
+
+        <li class="progressbar">
+          <svg class="progressbar__svg">
+            <circle cx="45" cy="45" r="40" class="progressbar__svg-circle circle-scss shadow-scss"> </circle>
+          </svg>
+          <span class="progressbar__text shadow-scss">SCSS</span>
+        </li>
+
+        <li class="progressbar">
+          <svg class="progressbar__svg">
+            <circle cx="45" cy="45" r="40" class="progressbar__svg-circle circle-js shadow-js"> </circle>
+          </svg>
+          <span class="progressbar__text shadow-js">JavaScript</span>
+        </li>
+
+        <li class="progressbar">
+          <svg class="progressbar__svg">
+            <circle cx="45" cy="45" r="40" class="progressbar__svg-circle circle-ts shadow-ts"> </circle>
+          </svg>
+          <span class="progressbar__text shadow-ts">Git</span>
+        </li>
+
+        <li class="progressbar">
+          <svg class="progressbar__svg">
+            <circle cx="45" cy="45" r="40" class="progressbar__svg-circle circle-react shadow-react"> </circle>
+          </svg>
+          <span class="progressbar__text shadow-react">React.js</span>
+        </li>
+
+
+
+
+
+      </ul>
     </aside>
   </main>
   <section class="description">
+    <h4>About me:</h4>
     <p>I am web-developer. My goal is to change jobs and do what I love, helping other people solve their
       problems.</p>
+  </section>
 
-
-
+  <section id="project" class="projects">
     <h4>My projects:</h4>
+    <ul class="projects">
+      <li class="projects-item">
+        <a href="https://esoshyki.github.io/contra/" target="_blank">
+          <figure>
+            <img class="project-item__image" src="image/contra.jpg" alt="">
+            <figcaption>Game "Contra"</figcaption>
+          </figure>
+        </a>
+        <p>This is 2d shoter. Game have 2 levels and Boss in the end 2 level.</p>
+        <P>Tools: React, Redux, MatterJs, html, scss</P>
+      </li>
+
+      <li class="projects-item">
+        <a href="https://covid-git-master.esoshyki.vercel.app/" target="_blank">
+          <figure>
+            <img class="project-item__image" src="image/covid.jpg" alt="">
+            <figcaption>App "Covid"</figcaption>
+          </figure>
+        </a>
+        <p>This is statisctic application. App have world map, tables and graphics.</p>
+        <P>Tools: React, Redux, html, scss</P>
+      </li>
+
+
+      <li class="projects-item">
+        <a href="https://rolling-scopes-school.github.io/bexon26-JS2020Q3/english-for-kids/" target="_blank">
+          <figure>
+            <img class="project-item__image" src="image/english.jpg" alt="">
+            <figcaption>App "English"</figcaption>
+          </figure>
+        </a>
+        <p>This is English for Kids application. App have kit cards, learn and game mode.</p>
+        <P>Tools:Js, html, scss</P>
+      </li>
+
+
+
+
+      <li class="projects-item">
+        <a href="https://rolling-scopes-school.github.io/bexon26-JS2020Q3/gem-pazzle/" target="_blank">
+          <figure>
+            <img class="project-item__image" src="image/game.jpg" alt="">
+            <figcaption>Game "Gem Puzzle"</figcaption>
+          </figure>
+        </a>
+        <p>This is Game. Need to move blocks to connect right capture</p>
+        <P>Tools: Js, html, scss</P>
+      </li>
+
+
+      <li class="projects-item">
+        <a href="https://rolling-scopes-school.github.io/bexon26-JS2020Q3/virtual-keyboard/" target="_blank">
+          <figure>
+            <img class="project-item__image" src="image/keyboard.jpg" alt="">
+            <figcaption>App "keyboard"</figcaption>
+          </figure>
+        </a>
+        <p>This is Web keyboard. It have voice decoder to text</p>
+        <P> Tools:Js, html, css</P>
+      </li>
+
+
+
+      <li class="projects-item">
+        <a href="https://rolling-scopes-school.github.io/bexon26-JS2020Q3/momentum/" target="_blank">
+          <figure>
+            <img class="project-item__image" src="image/momentim.jpg" alt="">
+            <figcaption>App "Momentum"</figcaption>
+          </figure>
+        </a>
+        <p>This is Clock with Weather. Ever hour to change background picture</p>
+        <P>Tools: Js, html, css</P>
+      </li>
+
+
+
+
+    </ul>
 
   </section>
 
+  <section id="code" class="code">
+    <h4>Code Example: Hanoi Tower</h4>
+    <pre>
+      <code class="js">
+        export default function calculateHanoi(disksNumber, turnsSpeed) {
+          let turns = Math.pow(2, disksNumber) - 1;
+          let seconds = +(Math.floor(turns / (turnsSpeed / 3600)));
+      
+        return { turns: turns, seconds: seconds }
+        }
+      </code>
+    </pre>
 
-  <h4>Experience</h4>
-  <p>I have experience creating an online store on CMS ModX Revolution</p>
-  <h4>Education</h4>
-  <p>Faculty of Physics, specialty - Automated Systems of Information Processing, Univerversity of Name of
-    Francisca Scorina 2014-2019.
+  </section>
+  <section id="expirience" class="expirience">
+    <h4>Experience</h4>
+    <p>I have experience creating an online store on CMS ModX Revolution</p>
+    <h4 id="education">Education</h4>
+    <p>Faculty of Physics, specialty - Automated Systems of Information Processing, Univerversity of Name of
+      Francisca Scorina 2014-2019.
 
-    HTML basics course
-    CSS course
-    HTML Academy: JavaScript level 1, Mimo: basis html, css, js
-  </p>
+      HTML basics course
+      CSS course
+      HTML Academy: JavaScript level 1, Mimo: basis html, css, js
+    </p>
+
+  </section>
   <footer class="footer">
 
     <nav class="footer-links">
@@ -87,6 +230,38 @@
     <p class="footer-year">2021</p>
 
   </footer>
+  <script>const backdrop = document.querySelector('.backdrop');
+    const aboutLink = document.querySelectorAll('.header-menu-list__item');
+    const burger = document.getElementById('burger');
+    const burgerLabel = document.getElementById('burger-label');
+    const header = document.querySelector('.header');
+
+    backdrop.addEventListener('click', () => {
+      burger.checked = false;
+      burgerLabel.style.left = '20px'
+
+    })
+    aboutLink.forEach(item => {
+      item.addEventListener('click', () => {
+        burger.checked = false;
+        burgerLabel.style.left = '20px'
+      })
+    })
+
+    burger.addEventListener('change', () => {
+      if (!burger.checked) {
+        burgerLabel.style.left = '20px';
+      } else {
+        burgerLabel.style.left = `${(header.offsetWidth - window.innerWidth) / 2 + 270}px`;
+      }
+    })
+
+    window.addEventListener('resize', () => {
+      burgerLabel.style.left = '20px';
+      burger.checked = false;
+    })
+
+  </script>
 </body>
 
 </html>
